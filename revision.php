@@ -21,7 +21,7 @@
 
     ?>
     <p>
-    <h2>quel est le resultat de:</h2>
+        <h2>quel est le resultat de:</h2>
         <?php
 
         echo $_SESSION["var"] . " * " . ($_SESSION['random']);
@@ -34,8 +34,6 @@
     </form>
     <?php
     $rep = (int) $_POST["reponse"];
-    var_dump($rep);
-    var_dump($_SESSION['random']);
     ?>
     <p>
         votre réponse est:
@@ -43,10 +41,11 @@
     <?php
 
     if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
-        echo "correcte, Bravo!";
-    } else
-
-        echo "incorrecte :( ";
+        echo "correcte";
+    } else {
+        echo "incorrecte";
+    }
+    $_SESSION['random'] = rand(0, 15);
     ?>
 
 </body>
