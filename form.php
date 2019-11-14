@@ -42,17 +42,13 @@
         </form>
 
 
-
-
         <table id="table">
             <?php
             session_start();
 
-            $_SESSION["var1"] = rand(0, 15);
-
-
             $var = (int) $_POST["nombre"];
             $_SESSION["var"] = $var;
+            $_SESSION['random'] = rand(0, 15);
             for ($i = 0; $i < 16; $i++) {
                 ?>
             <tr>
