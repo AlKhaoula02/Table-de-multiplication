@@ -32,18 +32,16 @@
         <input type="submit">
     </form>
     <p>
-        votre réponse est: tru
+        votre réponse est:
     </p>
-
-
     <?php 
-    
     $rep= (int) $_POST["reponse"];
     if ( $rep == ($_SESSION["var"]*$var1 )){
-        echo "bonne";
+        echo "correcte";
     }
-    
+    else 
 
+    echo "incorrecte";
     ?>
     
 
