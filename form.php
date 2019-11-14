@@ -12,14 +12,15 @@
 </head>
 
 <body>
-
+<div class="contenu">
     <div class="titre">
         <h1> Table de multiplication </h1>
+        <h2>Chosissez la table que vous voulez apprendre:</h2>
 
     </div>
 
-    <div class="contenu">
-
+    
+    <div class="formulaire">
         <form action="form.php" method="post">
             <select name="nombre" id="nombre">
                 <option value="0"></option>
@@ -38,7 +39,7 @@
                 <option value="14">14</option>
                 <option value="15">15</option>
             </select>
-            <input type="submit" value="multipliez!">
+            <input type="submit" value="GO!">
         </form>
 
 
