@@ -1,0 +1,39 @@
+
+
+.contenu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+form {
+    width: 400px;
+    margin: 1em;
+}
+
+input[type=submit]
+{
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#nombre {
+    width: 15%;
+    padding: 7px;
+    border:1px solid;
+
+
+}
+table {
+    border: 5px solid grey;
+    padding: 1px;
+    width: 50%;
+}
+td {
+    border: 2px solid grey;
+    width: 50%;
+}
