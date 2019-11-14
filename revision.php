@@ -10,19 +10,18 @@
 </head>
 
 <body>
-    <h1>Revisez!</h1>
-    <h2>quel est le resultat de:</h2>
-
+    <h1>Au tableau!</h1>
 
     <?php
     session_start();
-    echo "revisez la table de: " . $_SESSION["var"] . ".<br>";
+    echo "Revison la table de: " . $_SESSION["var"] . ".<br>";
 
     // $var1 = rand(0, 15);
 
 
     ?>
     <p>
+        <h2>quel est le resultat de:</h2>
         <?php
 
         echo $_SESSION["var"] . " * " . ($_SESSION['random']);
