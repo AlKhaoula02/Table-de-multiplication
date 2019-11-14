@@ -12,38 +12,40 @@
 <body>
     <h1>Revisez!</h1>
     <h2>quel est le resultat de:</h2>
-    
+
+
     <?php
     session_start();
-    echo "revisez la table de: ". $_SESSION["var"] . ".<br>";
-    
-    $var1 = rand(0, 15);
-    
-    
+    echo "revisez la table de: " . $_SESSION["var"] . ".<br>";
+
+    $var1 = $_SESSION["var1"];
+
+    echo $_SESSION["var"] . " * " . $var1;
+
     ?>
     <p>
-    <?php
-    echo $_SESSION["var"]." * ".$var1;
-    ?>
+        <?php
+        // echo $_SESSION["var"]." * ".$var1;
+        ?>
     </p>
 
     <form action="revision.php" method="post">
-        <input type="text" name = "reponse" >
+        <input type="text" name="reponse">
         <input type="submit">
     </form>
     <p>
         votre réponse est:
     </p>
-    <?php 
-    $rep= (int) $_POST["reponse"];
-    if ( $rep == ($_SESSION["var"]*$var1 )){
-        echo "correcte";
-    }
-    else 
+    <?php
 
-    echo "incorrecte";
+    $rep = (int) $_POST["reponse"];
+
+    if ($rep == ($_SESSION["var"] * $var1)) {
+        echo "correcte";
+    } else
+
+        echo "incorrecte";
     ?>
-    
 
 </body>
 

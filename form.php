@@ -19,7 +19,7 @@
     </div>
 
     <div class="contenu">
-    
+
         <form action="form.php" method="post">
             <select name="nombre" id="nombre">
                 <option value="0"></option>
@@ -40,18 +40,21 @@
             </select>
             <input type="submit" value="multipliez!">
         </form>
-    
-    
 
 
-    <table id="table">
-        <?php
-        session_start();
-        
-         $var = (int) $_POST["nombre"];
-         $_SESSION["var"] = $var;
-        for ($i = 0; $i < 16; $i++) { 
-            ?>
+
+
+        <table id="table">
+            <?php
+            session_start();
+
+            $_SESSION["var1"] = rand(0, 15);
+
+
+            $var = (int) $_POST["nombre"];
+            $_SESSION["var"] = $var;
+            for ($i = 0; $i < 16; $i++) {
+                ?>
             <tr>
                 <td><?php echo $var . "*" . $i . "=" ?> </td>
                 <td><?php echo $var * $i ?></td>
@@ -62,10 +65,10 @@
 
 
 
-        <?php } 
-        
-        ?>
-    </table>
+            <?php }
+
+            ?>
+        </table>
     </div>
 
 
