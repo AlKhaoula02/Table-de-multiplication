@@ -35,8 +35,6 @@
     </form>
     <?php
     $rep = (int) $_POST["reponse"];
-    var_dump($rep);
-    var_dump($_SESSION['random']);
     ?>
     <p>
         votre réponse est:
@@ -45,9 +43,10 @@
 
     if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
         echo "correcte";
-    } else
-
+    } else {
         echo "incorrecte";
+    }
+    $_SESSION['random'] = rand(0, 15);
     ?>
 
 </body>

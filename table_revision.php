@@ -20,7 +20,7 @@
 
     <div class="contenu">
 
-        <form action="form.php" method="post">
+        <form action="revision.php" method="post">
             <select name="nombre" id="nombre">
                 <option value="0"></option>
                 <option value="1">1</option>
