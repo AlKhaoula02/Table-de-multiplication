@@ -17,13 +17,14 @@
     session_start();
     echo "revisez la table de: ". $_SESSION["var"] . ".<br>";
     
-    $var1 = rand(0, 15);
+    // $var1 = rand(0, 15);
     
     
     ?>
     <p>
     <?php
-    echo $_SESSION["var"]." * ".$var1;
+    
+    echo $_SESSION["var"]." * ".($_SESSION['random']);
     ?>
     </p>
 
@@ -31,12 +32,17 @@
         <input type="text" name = "reponse" >
         <input type="submit">
     </form>
+    <?php 
+    $rep= (int) $_POST["reponse"];
+    var_dump($rep);
+    var_dump($_SESSION['random']);
+    ?>
     <p>
         votre réponse est:
     </p>
     <?php 
-    $rep= (int) $_POST["reponse"];
-    if ( $rep == ($_SESSION["var"]*$var1 )){
+    
+    if ( $rep == ($_SESSION["var"] * $_SESSION['random'] )){
         echo "correcte";
     }
     else 
