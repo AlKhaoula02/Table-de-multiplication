@@ -51,7 +51,6 @@
 <!-- <img src="./assets/img/1.png" alt="background"> -->
 <div class="contenu">
     <div class="titre">
-        <!-- <h1> Table de multiplication </h1> -->
         <h2>Chosissez la table que vous voulez apprendre:</h2>
 
     </div>
@@ -83,7 +82,7 @@
         <table id="table">
             <?php
             session_start();
-
+            if (isset($_POST["nombre"]) ){
             $var = (int) $_POST["nombre"];
             $_SESSION["var"] = $var;
             $_SESSION['random'] = rand(0, 15);

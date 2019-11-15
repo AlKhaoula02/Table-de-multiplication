@@ -23,8 +23,6 @@ echo $_SESSION["var"] . " * " . $var1 . "<br>";
         session_start();
         echo "Révisons ensemble la table de: " . $_SESSION["var"] . ".<br>";
 
-        // $var1 = rand(0, 15);
-
 
         ?>
         <p>
@@ -42,28 +40,29 @@ if (isset($_POST["submit"])) {
             ?>
         </p>
 
+
+
         <form action="revision.php" method="post">
             <input type="text" name="reponse">
             <input type="submit">
         </form>
         <?php
-        $rep = (int) $_POST["reponse"];
-        ?>
-        <p>
-            Votre réponse est:
-        </p>
+        if (isset($_POST["reponse"])) {
+            $rep = (int) $_POST["reponse"];
+            ?>
+            <p>
+                Votre réponse est:
+            </p>
         <?php
 
-        if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
-            echo " Correcte, Bravo! ";
-        } else {
-            echo " Incorrecte :( ";
+            if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
+                echo " Correcte, Bravo! ";
+            } else {
+                echo " Incorrecte :( ";
+            }
+            $_SESSION['random'] = rand(0, 15);
         }
-        $_SESSION['random'] = rand(0, 15);
         ?>
-
-        <br>
-        <br>
 
         <div class="link">
             <br>
