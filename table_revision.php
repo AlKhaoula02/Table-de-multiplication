@@ -21,9 +21,15 @@
 
 
         <div class="formulaire">
+<<<<<<< Updated upstream
             <form action="revision.php" method="post">
                 <select name="nombre">
                     <option value="0"></option>
+=======
+
+            <form action="table_revision.php" method="post">
+                <select name="nombre" id="nombre">
+>>>>>>> Stashed changes
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -41,11 +47,14 @@
                 </select>
                 <input type="submit" value="GO!">
             </form>
+<<<<<<< Updated upstream
 
 
             <table id="table">
                 <?php
                 session_start();
+=======
+>>>>>>> Stashed changes
 
                 $var = (int) $_POST["nombre"];
                 $_SESSION["var"] = $var;
@@ -57,6 +66,7 @@
                     <td><?php echo $var * $i ?></td>
                 </tr>
 
+<<<<<<< Updated upstream
 
                 <!-- echo $var."*". $i. "=". $var * $i."<br>"; -->
 
@@ -68,6 +78,19 @@
             </table>
         </div>
 
+=======
+        </div>
+
+        <?php
+
+        $_SESSION["var"] = $_POST["nombre"];
+        echo "Revison la table de: " . $_POST["nombre"];
+
+
+
+
+        ?>
+>>>>>>> Stashed changes
 </body>
 
 </html>
