@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -71,55 +70,5 @@
 </div>
 
 </body>
-=======
-<?php
-session_start();
-$result;
-if (isset($_SESSION["var"])) {
-
-    $random = rand(0, 15);
-    $result = (int) ($_SESSION["var"]) * $random;
-}
-
-
-echo "Revison la table de: " . $_SESSION["var"] . ".<br>";
-
-?>
-
-
-
-<h1>quel est le resultat de"</h1>
-<?php
-echo $_SESSION["var"] . " * " . ($random);
-?>
-<!-- <form action="revision.php" method="post">
-    <input type="text" name="reponse">
-    <input type="submit">
-</form> -->
-
-
-
-
-<?php
-
-
-if (isset($_SESSION["var"])) {   ?>
-
-<form action="revision.php" method="post">
-    <input type="text" name="reponse">
-    <input type="submit">
-</form>
-
-<?php
-    if ((int) $_POST["reponse"] == $result) {
-        echo "votre réponse est : correcte";
-    } else {
-        echo "votre réponse est: incorrecte";
-    }
-} else {
-
-    echo "Veuillez choisir result";
-}
->>>>>>> Stashed changes
 
 </html>
