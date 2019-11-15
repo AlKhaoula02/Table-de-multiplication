@@ -18,8 +18,6 @@
     session_start();
     echo "Révisons ensemble la table de: " . $_SESSION["var"] . ".<br>";
 
-    // $var1 = rand(0, 15);
-
 
     ?>
     <p>
@@ -35,6 +33,7 @@
         <input type="submit">
     </form>
     <?php
+    if(isset($_POST["reponse"])){
     $rep = (int) $_POST["reponse"];
     ?>
     <p>
@@ -48,6 +47,7 @@
         echo " Incorrecte :( ";
     }
     $_SESSION['random'] = rand(0, 15);
+    }   
     ?>
 
     <br>
