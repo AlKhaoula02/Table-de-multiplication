@@ -129,7 +129,7 @@ body {
   text-align: center;
   font-family: "Geneva", sans-serif;
   font-size: 24px;
-  background-image: url(C:\xampp\htdocs\Table-de-multiplication\assets\img\img2.png);
+  background-image: url("./img/img2.png");
   background-size: auto cover;
 }
 
@@ -152,7 +152,7 @@ h2 {
   padding: 10px;
   margin: 10px;
   border-color: gray;
-  
+
   color: gray;
   display: flex;
   flex-direction: column;
@@ -255,8 +255,8 @@ td {
   color: gray;
 }
 img {
-    width: 150px;
-    height: 120px;
+  width: 150px;
+  height: 120px;
 }
 .link a:hover {
   background-color: #555;
@@ -264,13 +264,13 @@ img {
   color: white;
 }
 .link2 {
-    width: 80%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 .link2 a {
-text-decoration: none;
-padding: 0px;
-width: 0px;
-color: gray;
+  text-decoration: none;
+  padding: 0px;
+  width: 0px;
+  color: gray;
 }
