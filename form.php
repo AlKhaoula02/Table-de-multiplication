@@ -48,7 +48,7 @@
             if (isset($_POST["nombre"]) ){
             $var = (int) $_POST["nombre"];
             $_SESSION["var"] = $var;
-            $_SESSION['random'] = rand(0, 15);
+            
             for ($i = 0; $i < 16; $i++) {
                 ?>
             <tr>

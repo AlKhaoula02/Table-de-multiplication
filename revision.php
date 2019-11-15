@@ -1,4 +1,11 @@
+<?php
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
@@ -15,7 +22,7 @@
         <br>
 
         <?php
-        session_start();
+
         echo "Révisons ensemble la table de: " . $_SESSION["var"] . ".<br>";
 
 
@@ -23,8 +30,10 @@
         <p>
             <h2>Quel est le resultat de:</h2>
             <?php
+            $a=(int) rand(0, 15);
+            $b= (int) $_SESSION["var"];
 
-            echo $_SESSION["var"] . " * " . ($_SESSION['random']);
+            echo $b . " * " . ($a);
             ?>
         </p>
 
@@ -32,23 +41,37 @@
 
         <form action="revision.php" method="post">
             <input type="text" name="reponse">
-            <input type="submit">
+            <input type="submit" value="Valider">
         </form>
         <?php
-        if (isset($_POST["reponse"])) {
-            $rep = (int) $_POST["reponse"];
-            ?>
-            <p>
-                Votre réponse est:
-            </p>
-        <?php
 
-            if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
-                echo " Correcte, Bravo! ";
-            } else {
-                echo " Incorrecte :( ";
+        if (isset($a)) {
+        echo $a."<br>";
+        var_dump($_POST["reponse"]);
+            if (isset($_POST["reponse"])) {
+                $rep = (int) $_POST["reponse"];
+                echo $a;
+                ?>
+                <p>
+                    Votre réponse est:
+                </p>
+        <?php
+        echo $a."<br>";
+        echo $rep."<br>";
+        echo $b."<br>";
+                if ($rep !=  ($b * $a)) {
+                    echo $rep."celle ci <br>";
+                    echo " Incorrecte :( ";
+
+                } else {
+                    echo $a."<br>";
+                    echo $rep."celle la <br>";
+
+                    echo " Correcte, Bravo! ";
+                    
+                }
+                echo $a;
             }
-            $_SESSION['random'] = rand(0, 15);
         }
         ?>
 
