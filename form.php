@@ -12,9 +12,10 @@
 </head>
 
 <body>
+<!-- <img src="./assets/img/1.png" alt="background"> -->
 <div class="contenu">
     <div class="titre">
-        <h1> Table de multiplication </h1>
+        <!-- <h1> Table de multiplication </h1> -->
         <h2>Chosissez la table que vous voulez apprendre:</h2>
 
     </div>
@@ -23,7 +24,7 @@
     <div class="formulaire">
         <form action="form.php" method="post">
             <select name="nombre" id="nombre">
-                <option value="0"></option>
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -66,6 +67,14 @@
 
             ?>
         </table>
+        <br>
+        <div class="link">
+            <p>A vous de jouer!</p>
+            <br>
+        <a href="revision.php">"C'est par ici.."</a>
+        <br>
+        <br>
+        </div>
     </div>
 
 </body>

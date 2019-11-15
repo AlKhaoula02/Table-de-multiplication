@@ -1,0 +1,276 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* debut */
+body {
+  line-height: 1;
+  text-align: center;
+  font-family: "Geneva", sans-serif;
+  font-size: 24px;
+  background-image: url(C:\xampp\htdocs\Table-de-multiplication\assets\img\img2.png);
+  background-size: auto cover;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.contenu {
+  font-size: 20px;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  border-color: gray;
+  
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  /* margin-left: auto;
+    margin-right: auto; */
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  font-size: 20px;
+}
+
+#number {
+  padding: 5px;
+}
+
+input {
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 130px;
+  border-radius: 5px;
+}
+
+.formulaire {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titre {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  width: 400px;
+  padding: 10px;
+  margin: auto;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  width: 130px;
+  border-radius: 5px;
+  /* width: 40px; */
+  margin: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  color: gray;
+}
+#input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+}
+
+#nombre {
+  width: 70px;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #ccc;
+  background-color: #dddddd;
+  font-size: 20px;
+  color: gray;
+}
+table {
+  background-color: lavender;
+  border: 3px solid grey;
+  padding: 1px;
+  margin-left: 23%;
+  margin-top: 0%;
+  margin-bottom: 10px;
+  width: 50%;
+}
+td {
+  border: 0.1px solid grey;
+  width: 50%;
+}
+.link {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link a {
+  text-decoration: none;
+  padding: 10px;
+  width: 130px;
+  border-radius: 5px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  background-color: #dddddd;
+  color: gray;
+}
+img {
+    width: 150px;
+    height: 120px;
+}
+.link a:hover {
+  background-color: #555;
+  cursor: pointer;
+  color: white;
+}
+.link2 {
+    width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link2 a {
+text-decoration: none;
+padding: 0px;
+width: 0px;
+color: gray;
+}

@@ -10,18 +10,20 @@
 </head>
 
 <body>
-    <h1>Au tableau!</h1>
+    <div class="contenu">
+    <h2>Maintenant, au tableau!!</h2>
+    <br>
 
     <?php
     session_start();
-    echo "Revison la table de: " . $_SESSION["var"] . ".<br>";
+    echo "Révisons ensemble la table de: " . $_SESSION["var"] . ".<br>";
 
     // $var1 = rand(0, 15);
 
 
     ?>
     <p>
-        <h2>quel est le resultat de:</h2>
+        <h2>Quel est le resultat de:</h2>
         <?php
 
         echo $_SESSION["var"] . " * " . ($_SESSION['random']);
@@ -36,17 +38,36 @@
     $rep = (int) $_POST["reponse"];
     ?>
     <p>
-        votre réponse est:
+        Votre réponse est:
     </p>
     <?php
 
     if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
-        echo "correcte";
+        echo " Correcte, Bravo! ";
     } else {
-        echo "incorrecte";
+        echo " Incorrecte :( ";
     }
     $_SESSION['random'] = rand(0, 15);
     ?>
+
+    <br>
+    <br>
+
+    <div class="link">
+            <br>
+        <a href="form.php">Une autre table? </a>
+        <br>
+        <br>
+    </div>
+    <div class="link2">
+            
+            <br>
+        <a href="index.php"> <img src="./assets/img/img3.png" alt="retour"></a>
+        <br>
+        <p>A bientôt!</p>
+        <br>
+    </div>
+</div>
 
 </body>
 
