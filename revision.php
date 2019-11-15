@@ -1,53 +1,26 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+session_start();
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Révision</title>
-</head>
-
-<body>
-    <h1>Au tableau!</h1>
-
-    <?php
-    session_start();
-    echo "Revison la table de: " . $_SESSION["var"] . ".<br>";
-
-    // $var1 = rand(0, 15);
+echo "Favorite color is " . $_SESSION["favcolor1"] . ".<br>";
 
 
-    ?>
-    <p>
-        <h2>quel est le resultat de:</h2>
-        <?php
+$var1 = rand(0, 15);
+echo "quel est le resultat de" . "<br>";
+echo $_SESSION["var"] . " * " . $var1 . "<br>";
+?>
 
-        echo $_SESSION["var"] . " * " . ($_SESSION['random']);
-        ?>
-    </p>
+<form action="revision.php" method="post">
+    <input type="text" name="reponse">
+    <input type="submit">
+</form>
 
-    <form action="revision.php" method="post">
-        <input type="text" name="reponse">
-        <input type="submit">
-    </form>
-    <?php
+
+<?php
+if (isset($_POST["submit"])) {
     $rep = (int) $_POST["reponse"];
-    ?>
-    <p>
-        votre réponse est:
-    </p>
-    <?php
+    echo "votre réponse est:" . "<br>";
+} else {
+    echo "Veuillez choisir result";
+}
 
-    if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
-        echo "correcte";
-    } else {
-        echo "incorrecte";
-    }
-    $_SESSION['random'] = rand(0, 15);
-    ?>
-
-</body>
-
-</html>
+?>

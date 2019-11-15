@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Révision</title>
+</head>
+
+<body>
+    <h1>Au tableau!</h1>
+
+    <?php
+    session_start();
+    echo "Revison la table de: " . $_SESSION["var"] . ".<br>";
+
+    // $var1 = rand(0, 15);
+
+
+    ?>
+    <p>
+        <h2>quel est le resultat de:</h2>
+        <?php
+
+        echo $_SESSION["var"] . " * " . ($_SESSION['random']);
+        ?>
+    </p>
+
+    <form action="revision.php" method="post">
+        <input type="text" name="reponse">
+        <input type="submit">
+    </form>
+    <?php
+    $rep = (int) $_POST["reponse"];
+    ?>
+    <p>
+        votre réponse est:
+    </p>
+    <?php
+
+    if ($rep == ($_SESSION["var"] * $_SESSION['random'])) {
+        echo "correcte";
+    } else {
+        echo "incorrecte";
+    }
+    $_SESSION['random'] = rand(0, 15);
+    ?>
+
+</body>
+
+</html>

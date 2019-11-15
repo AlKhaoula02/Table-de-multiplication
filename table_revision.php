@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,18 +17,21 @@
 </head>
 
 <body>
+
     <div class="contenu">
         <div class="titre">
             <h1> Table de multiplication </h1>
-            <h2>Chosissez la table que vous voulez apprendre:</h2>
-
+            <div id="ac1">
+                <a href="index.php">Retour</a> <br>
+                <a href="revision.php">Réviser !</a>
+            </div>
         </div>
 
-
+        <h2>Chosissez la table que vous voulez apprendre:</h2>
         <div class="formulaire">
-            <form action="revision.php" method="post">
-                <select name="nombre">
-                    <option value="0"></option>
+            <!--             
+        <form action="table_revision.php" method="post">
+                <select name="nombre" id="nombre">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -40,33 +48,33 @@
                     <option value="15">15</option>
                 </select>
                 <input type="submit" value="GO!">
+            </form> -->
+
+            <form action="revision.php" method="post">
+                <input type="radio" name="nombre" value="1"> 1<br>
+                <input type="radio" name="nombre" value="2"> 2<br>
+                <input type="radio" name="nombre" value="3"> 3<br>
+
+                <input type="submit" value="ok">
             </form>
 
 
-            <table id="table">
-                <?php
-                session_start();
+            <?php
+            $_SESSION["favcolor"] = "green";
+            $_SESSION["favcolor1"] = (int) $_POST["nombre"];
 
-                $var = (int) $_POST["nombre"];
-                // $_SESSION["var"] = $var;
-                // $_SESSION['random'] = rand(0, 15);
-                for ($i = 0; $i < 16; $i++) {
-                    ?>
-                <tr>
-                    <td><?php echo $var . "*" . $i . "=" ?> </td>
-                    <td><?php echo $var * $i ?></td>
-                </tr>
+            $_SESSION["var"] = (int) $_POST["nombre"];
 
+            if (isset($_POST["nombre"])) {
 
-                <!-- echo $var."*". $i. "=". $var * $i."<br>"; -->
+                $_SESSION["var"] = (int) $_POST["nombre"];
 
+                echo  $_SESSION["var"];
+            }
+            ?>
 
-
-                <?php }
-
-                ?>
-            </table>
         </div>
+
 
 </body>
 
