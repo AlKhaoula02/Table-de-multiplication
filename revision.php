@@ -32,6 +32,7 @@ session_start();
             <?php
             $a=(int) rand(0, 15);
             $b= (int) $_SESSION["var"];
+            $ansr= $b * $a;
 
             echo $b . " * " . ($a);
             ?>
@@ -59,7 +60,7 @@ session_start();
         echo $a."<br>";
         echo $rep."<br>";
         echo $b."<br>";
-                if ($rep !=  ($b * $a)) {
+                if ($rep !=  ($ansr)) {
                     echo $rep."celle ci <br>";
                     echo " Incorrecte :( ";
 
