@@ -142,12 +142,14 @@ h1 {
   padding: 10px 0;
   text-transform: uppercase;
   font-size: 28px;
+  color: #00568C;
 }
 
 h2 {
   text-align: center;
   padding: 10px 0;
   font-size: 22px;
+  color: #237AA5;
 }
 
 .contenu {
@@ -157,7 +159,7 @@ h2 {
   margin: 10px;
   border-color: gray;
 
-  color: gray;
+  color: #237AA5;
   display: flex;
   flex-direction: column;
   width: 700px;
