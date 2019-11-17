@@ -175,7 +175,7 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #number {
@@ -214,8 +214,9 @@ input[type="submit"] {
   /* width: 40px; */
   margin: 10px;
   border: 1px solid #ccc;
-  font-size: 20px;
-  color: gray;
+  font-size: 20px ;
+  color:darkslategray;
+  background-color: #099DD1;
 }
 #input[type="submit"]:hover {
   cursor: pointer;
@@ -280,4 +281,12 @@ img {
   padding: 0px;
   width: 0px;
   color: gray;
+}
+.oui {
+  font-size: 1.6rem;
+  color:#0CA049;
+}
+.non {
+  font-size: 1.6rem;
+  color:darkred;
 }

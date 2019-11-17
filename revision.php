@@ -18,78 +18,54 @@ session_start();
 
 <body>
     <div class="contenu">
-        <h2>Maintenant, au tableau!!</h2>
+        <h1>Maintenant, au tableau!!</h1>
         <br>
-
         <?php
-
-        echo "Révisons ensemble la table de: " . $_SESSION["var"] . ".<br>";
-
-
+        echo "<h2>Révisons ensemble la table de: " . $_SESSION["var"] . ".</h2><br>";
         ?>
         <p>
             <h2>Quel est le resultat de:</h2>
             <?php
-            $a=(int) rand(0, 15);
-            $b= (int) $_SESSION["var"];
-            $ansr= $b * $a;
-
-            echo $b . " * " . ($a);
-            ?>
-        </p>
-
-
-
-        <form action="revision.php" method="post">
-            <input type="text" name="reponse">
-            <input type="submit" value="Valider">
-        </form>
-        <?php
-
-        if (isset($a)) {
-        echo $a."<br>";
-        var_dump($_POST["reponse"]);
+            if (isset($_POST["var"])) {
+                $_SESSION["var"]  = $_POST["var"];
+            };
             if (isset($_POST["reponse"])) {
-                $rep = (int) $_POST["reponse"];
-                echo $a;
-                ?>
-                <p>
-                    Votre réponse est:
-                </p>
-        <?php
-        echo $a."<br>";
-        echo $rep."<br>";
-        echo $b."<br>";
-                if ($rep !=  ($ansr)) {
-                    echo $rep."celle ci <br>";
-                    echo " Incorrecte :( ";
-
-                } else {
-                    echo $a."<br>";
-                    echo $rep."celle la <br>";
-
-                    echo " Correcte, Bravo! ";
-                    
+                if (isset($_SESSION['rand'])) {
+                    if ($_SESSION['rand'] * $_SESSION['var'] == $_POST['reponse']) {
+                        $reslt = ' <p class="oui">Bonne réponse, bravo!</br>la réponse était bien ' . $_POST["reponse"] . '</p></br>';
+                    } else {
+                        $reslt = '<p class="non">Incorrect :(</br> la réponse est plutôt ' . $_SESSION['rand'] * $_SESSION['var'] . '</p></br>';
+                    }
                 }
-                echo $a;
-            }
-        }
-        ?>
+            };
+            $_SESSION['rand'] = rand(1, 15);
+            ?>
+            <p class="question"> <?php echo $_SESSION["var"] ?> X <?php echo $_SESSION["rand"] ?> </p>
+            <form action="revision.php" method="post">
+                <input type="text" name="reponse">
+                <input type="submit" value="Valider">
+            </form>
 
-        <div class="link">
-            <br>
-            <a href="form.php">Une autre table? </a>
-            <br>
-            <br>
-        </div>
-        <div class="link2">
-
-            <br>
-            <a href="index.php"> <img src="./assets/img/img3.png" alt="retour"></a>
-            <br>
-            <p>A bientôt!</p>
-            <br>
-        </div>
+            <div class="resultat">
+                <?php
+                if (isset($reslt)) {
+                    echo $reslt;
+                };
+                ?>
+            </div>
+            <div class="link">
+                <br>
+                <a href="form.php">Une autre table? </a>
+                <br>
+                <br>
+            </div>
+            <div class="link2">
+                <br>
+                <a href="reset.php"> <img src="./assets/img/img3.png" alt="retour"></a>
+                <br>
+                <p>A bientôt!</p>
+                <br>
+            </div>
     </div>
 
 </body>

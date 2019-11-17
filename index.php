@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -15,24 +15,20 @@
 
 
 
-<div class="contenu">
-<h1> les tables de multiplication</h1>
-<br>
-<h2>Hello !</h2>
-<br>
-<br>
-<div class="link">
-    <div id="ac1">
-        <a href="form.php">Et si nous apprenions les tables de multiplication?</a> 
-    </div>
-    <br>
-    <br>
-    <div id="ac2">
-        <a href="revision.php">Révisons ensemble!</a>
-    </div>
-    <br>
+    <div class="contenu">
+        <h1> les tables de multiplication</h1>
+        <br>
+        <h2>Hello !</h2>
+        <br>
+        <br>
+        <div class="link">
+            <div id="ac1">
+                <a href="form.php">Et si nous apprenions les tables de multiplication?</a>
+            </div>
+            <br>
+            <br>
 
-</div>
+        </div>
 </body>
 
 </html>
