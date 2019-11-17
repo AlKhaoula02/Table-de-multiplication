@@ -55,22 +55,21 @@
                             <td><?php echo $var . " X " . $i . " = " ?> </td>
                             <td><?php echo $var * $i ?></td>
                         </tr>
-                <?php }
-                } 
-                // else {
-                //     $_SESSION["var"] = ; 
-                // }
+                <?php } ?>
+                </table>
+                <br>
+                <div class="link">
+                    <p>A vous de jouer!</p>
+                    <br>
+                    <a href="revision.php">"C'est par ici.."</a>
+                    <br>
+                    <br>
+                </div>
+                <?php } ?>
+                
 
-                ?>
-            </table>
-            <br>
-            <div class="link">
-                <p>A vous de jouer!</p>
-                <br>
-                <a href="revision.php">"C'est par ici.."</a>
-                <br>
-                <br>
-            </div>
+                
+            
         </div>
 
 </body>
