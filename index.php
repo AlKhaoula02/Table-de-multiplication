@@ -10,11 +10,6 @@
 </head>
 
 <body>
-
-
-
-
-
     <div class="contenu">
         <h1> les tables de multiplication</h1>
         <br>

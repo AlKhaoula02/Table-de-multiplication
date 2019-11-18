@@ -23,7 +23,7 @@
             <form action="form.php" method="post">
                 <select name="nombre" id="nombre">
                     <option value="0">0</option>
-                    <option value="1"selected="selected">1</option>
+                    <option value="1" selected="selected">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="5">5</option>
@@ -55,21 +55,21 @@
                             <td><?php echo $var . " X " . $i . " = " ?> </td>
                             <td><?php echo $var * $i ?></td>
                         </tr>
-                <?php } ?>
-                </table>
+                    <?php } ?>
+            </table>
+            <br>
+            <div class="link">
+                <p>A vous de jouer!</p>
                 <br>
-                <div class="link">
-                    <p>A vous de jouer!</p>
-                    <br>
-                    <a href="revision.php">"C'est par ici.."</a>
-                    <br>
-                    <br>
-                </div>
-                <?php } ?>
-                
+                <a href="revision.php">"C'est par ici.."</a>
+                <br>
+                <br>
+            </div>
+        <?php } ?>
 
-                
-            
+
+
+
         </div>
 
 </body>

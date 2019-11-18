@@ -1,13 +1,8 @@
 <?php
 session_start();
-
-
 ?>
-
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +10,6 @@ session_start();
     <link rel="stylesheet" href="assets/style.css">
     <title>Révision</title>
 </head>
-
 <body>
     <div class="contenu">
         <h1>Maintenant, au tableau!!</h1>
@@ -45,7 +39,6 @@ session_start();
                 <input type="text" name="reponse">
                 <input type="submit" value="Valider">
             </form>
-
             <div class="resultat">
                 <?php
                 if (isset($reslt)) {
@@ -67,7 +60,5 @@ session_start();
                 <br>
             </div>
     </div>
-
 </body>
-
 </html>

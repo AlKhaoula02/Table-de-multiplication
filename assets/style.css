@@ -125,14 +125,13 @@ table {
 
 /* debut */
 body {
-    
-    height: 750px;
+  height: 750px;
   line-height: 1;
   text-align: center;
   font-family: "Geneva", sans-serif;
   font-size: 24px;
-  background-image: url("./img/img.png") ;
-  background-size:100% ;
+  background-image: url("./img/img.png");
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -142,14 +141,14 @@ h1 {
   padding: 10px 0;
   text-transform: uppercase;
   font-size: 28px;
-  color: #00568C;
+  color: #00568c;
 }
 
 h2 {
   text-align: center;
   padding: 10px 0;
   font-size: 22px;
-  color: #237AA5;
+  color: #237aa5;
 }
 
 .contenu {
@@ -159,7 +158,7 @@ h2 {
   margin: 10px;
   border-color: gray;
 
-  color: #237AA5;
+  color: #237aa5;
   display: flex;
   flex-direction: column;
   width: 700px;
@@ -214,9 +213,9 @@ input[type="submit"] {
   /* width: 40px; */
   margin: 10px;
   border: 1px solid #ccc;
-  font-size: 20px ;
-  color:darkslategray;
-  background-color: #099DD1;
+  font-size: 20px;
+  color: darkslategray;
+  background-color: #099dd1;
 }
 #input[type="submit"]:hover {
   cursor: pointer;
@@ -284,9 +283,9 @@ img {
 }
 .oui {
   font-size: 1.6rem;
-  color:#0CA049;
+  color: #0ca049;
 }
 .non {
   font-size: 1.6rem;
-  color:darkred;
+  color: darkred;
 }
